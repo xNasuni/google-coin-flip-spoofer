@@ -11,3 +11,6 @@ Here are some examples below.
 > Zig Zag `['t', 'h', 't', 'h', 't', 'h']`<br>
 > 4 Head Chars `['h', 'h', 'h', 'h']`<br>
 > 8 Tails Chars `['t', 't', 't', 't', 't', 't', 't', 't']`
+---
+> If you want to use an extension instead, you might be interested in this other repository:<br>
+> https://github.com/Whitelisted1/Rigged-Google-Coin-Flip
