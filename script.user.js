@@ -12,20 +12,6 @@
 // ==/UserScript==
 
 // this runs on any google search page but it shouldnt mess with anything. PLEASE REPORT A ISSUE IF SOMETHING DOES OCCUR
-// ==UserScript==
-// @name         Coinflip Spoofer
-// @namespace    https://github.com/xNasuni
-// @version      2024-02-01
-// @description  spoofs coinflip probabilities
-// @author       Mia
-// @match        https://www.google.com/search*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @version      1.1
-// @downloadURL  https://github.com/xNasuni/google-coin-flip-spoofer/raw/main/script.user.js
-// @grant        none
-// ==/UserScript==
-
-// this runs on any google search page but it shouldnt mess with anything. PLEASE REPORT A ISSUE IF SOMETHING DOES OCCUR
 
 (async () => {
     // incase anyone editing the array uses [t, h] etc.. 😢
