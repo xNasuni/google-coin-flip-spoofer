@@ -6,7 +6,7 @@
 // @author       Mia
 // @match        https://www.google.com/search*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @version      1.0
+// @version      1.1
 // @downloadURL  https://github.com/xNasuni/google-coin-flip-spoofer/raw/main/script.user.js
 // @grant        none
 // ==/UserScript==
@@ -21,7 +21,7 @@
     var heads = 'h'; // idiot-proof
   
   	// EDIT ONLY THIS PART BELOW
-  	var Sequence = ['t','t','t','t','h']; // the SEQUENCE in which the 'randomness' will play out, after it's DONE going through all of them, it'll be back to NORMAL 'randomness'. (you are free to change this ARRAY)
+  	var Sequence = [tails, heads, heads, heads, tails, tails, tails, heads]; // the SEQUENCE in which the 'randomness' will play out, after it's DONE going through all of them, it'll be back to NORMAL 'randomness'. (you are free to change this ARRAY)
   	// EDIT ONLY THIS PART ABOVE
   
   
@@ -79,7 +79,11 @@
         
       	ReturnData.IsReturning = true
       	ReturnData.ReturnData = ByteMap[FinalOutcome]
-      
+
+        if (InSequenceIndex > 0) { // 'ISI' is 0 rn, if it's greater than that we should just return real random things.
+            ReturnData.ReturnData = HookOriginal(); // if we already did the first Math.random call which is the one that's the guess, we should make everything after random like the coin velocity.
+        }
+
       	InSequenceIndex += 1;
       
       	if (InSequenceIndex >= 5) {
