@@ -1,11 +1,9 @@
 // ==UserScript==
 // @name         Coinflip Spoofer
 // @namespace    https://github.com/xNasuni
-// @version      2024-02-01
 // @description  spoofs coinflip probabilities
 // @author       Mia
 // @match        https://www.google.com/search*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @version      1.2
 // @downloadURL  https://github.com/xNasuni/google-coin-flip-spoofer/raw/main/script.user.js
 // @updateURL    https://github.com/xNasuni/google-coin-flip-spoofer/raw/main/script.user.js
@@ -54,7 +52,7 @@
         const caller = getCaller(level)
         console.log(caller)
         // at ksz.flip (https://www.google.com/xjs/_/js/<...truncated...>?xjs=s3:25:135)
-        return caller.includes("ksz.flip")
+        return caller.includes(".flip")
     }
 
     function hookfunction(container, funcName, hookCallback) {
